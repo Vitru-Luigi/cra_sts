@@ -3,8 +3,8 @@ import Product from './Product';
 
 const Products = ({products}) => (
 	<div className='Products'>
-		{products.map((product) => (
-			<Product product={product} />
+		{products.map((product, key) => (
+			<Product key={key} product={product} />
 		))}
 	</div>
 );

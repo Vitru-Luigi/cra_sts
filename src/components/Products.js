@@ -1,13 +1,18 @@
 import React from 'react';
 import Product from './Product';
 import PropTypes from 'prop-types';
+import {Container, Row, Col} from 'react-bootstrap';
 
 const Products = ({products}) => (
-	<section className='Products'>
-		{products.map((product, key) => (
-			<Product key={key} product={product} />
-		))}
-	</section>
+	<Container className='Products'>
+		<Row>
+			{products.map((product, key) => (
+				<Col>
+					<Product key={key} product={product} />
+				</Col>
+			))}
+		</Row>
+	</Container>
 );
 
 Products.propTypes = {

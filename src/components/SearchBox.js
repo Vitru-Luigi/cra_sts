@@ -1,15 +1,11 @@
 import PropTypes from 'prop-types';
+import {Form, FormControl} from 'react-bootstrap';
 
-const SearchBox = ({onChangeHandler}) => {
-	return (
-		<div>
-			<div>
-				<label htmlFor='search'>Search</label>
-				<input id='search' type='text' onChange={onChangeHandler} />
-			</div>
-		</div>
-	);
-};
+const SearchBox = ({onChangeHandler}) => (
+	<Form inline>
+		<FormControl type='text' placeholder='Search' className='mr-sm-2' onChange={onChangeHandler} />
+	</Form>
+);
 
 SearchBox.propTypes = {
 	onChangeHandler: PropTypes.func.isRequired,

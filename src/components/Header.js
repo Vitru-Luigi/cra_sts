@@ -1,8 +1,8 @@
 import SearchBox from './SearchBox';
 
-const Header = () => (
+const Header = ({onChangeHandler}) => (
 	<header>
-		<SearchBox />
+		<SearchBox onChangeHandler={onChangeHandler} />
 	</header>
 );
 

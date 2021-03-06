@@ -1,11 +1,10 @@
-import {useState} from 'react';
-
-const SearchBox = () => {
-	const [input, setInput] = useState('');
+const SearchBox = ({onChangeHandler}) => {
 	return (
 		<div>
-			<label htmlFor='search'>Search</label>
-			<input id='search' type='text' onChange={(e) => setInput(e.target.value)} />
+			<div>
+				<label htmlFor='search'>Search</label>
+				<input id='search' type='text' onChange={onChangeHandler} />
+			</div>
 		</div>
 	);
 };

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const SearchBox = ({onChangeHandler}) => {
 	return (
 		<div>
@@ -7,6 +9,10 @@ const SearchBox = ({onChangeHandler}) => {
 			</div>
 		</div>
 	);
+};
+
+SearchBox.propTypes = {
+	onChangeHandler: PropTypes.func.isRequired,
 };
 
 export default SearchBox;

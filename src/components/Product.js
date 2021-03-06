@@ -1,4 +1,5 @@
 import './Product.scss';
+import PropTypes from 'prop-types';
 
 const Product = ({product}) => (
 	<article className='Product'>
@@ -6,5 +7,9 @@ const Product = ({product}) => (
 		<img src={product.image} alt='img' />
 	</article>
 );
+
+Product.propTypes = {
+	product: PropTypes.object.isRequired,
+};
 
 export default Product;

@@ -1,5 +1,6 @@
 import React from 'react';
 import Product from './Product';
+import PropTypes from 'prop-types';
 
 const Products = ({products}) => (
 	<section className='Products'>
@@ -8,5 +9,9 @@ const Products = ({products}) => (
 		))}
 	</section>
 );
+
+Products.propTypes = {
+	products: PropTypes.array.isRequired,
+};
 
 export default Products;

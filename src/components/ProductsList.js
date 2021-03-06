@@ -7,7 +7,7 @@ import './ProductsList.scss';
 
 const ProductsList = ({error, errorMsg, loading, results}) => (
 	<>
-		{error && <Message msg={errorMsg} />}
+		{error && <Message msg={errorMsg} variant='danger' />}
 		{loading ? <Loader /> : <Products products={results} />}
 	</>
 );

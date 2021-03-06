@@ -1,9 +1,10 @@
+import './Header.scss';
 import SearchBox from './SearchBox';
 import PropTypes from 'prop-types';
 import {Navbar, Container} from 'react-bootstrap';
 
 const Header = ({onChangeHandler}) => (
-	<Navbar variant='dark' bg='primary'>
+	<Navbar variant='dark' bg='primary' className='Header'>
 		<Container>
 			<Navbar.Brand href='#'>Navbar</Navbar.Brand>
 			<SearchBox onChangeHandler={onChangeHandler} />

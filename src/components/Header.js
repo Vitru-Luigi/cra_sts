@@ -1,11 +1,9 @@
 import SearchBox from './SearchBox';
 
-const Header = () => {
-	return (
-		<div>
-			<SearchBox />
-		</div>
-	);
-};
+const Header = () => (
+	<header>
+		<SearchBox />
+	</header>
+);
 
 export default Header;

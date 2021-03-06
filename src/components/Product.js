@@ -1,12 +1,10 @@
-import React from 'react';
+import './Product.scss';
 
-const Product = ({product}) => {
-	return (
-		<div>
-			<h3>{product.name}</h3>
-			<img src={product.image} alt='img' />
-		</div>
-	);
-};
+const Product = ({product}) => (
+	<div className='Product'>
+		<h3>{product.name}</h3>
+		<img src={product.image} alt='img' />
+	</div>
+);
 
 export default Product;

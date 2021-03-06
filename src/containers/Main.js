@@ -1,5 +1,3 @@
-const Main = ({children}) => {
-	return <main>{children}</main>;
-};
+const Main = ({children}) => <main>{children}</main>;
 
 export default Main;

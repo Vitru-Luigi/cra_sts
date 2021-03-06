@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import ProductsList from './components/ProductsList';
 import Main from './containers/Main';
+import getData from './utils/getData';
 
 const App = () => {
 	const [loading, setLoading] = useState(false);
@@ -15,18 +16,7 @@ const App = () => {
 	const results = products.filter((product) => product.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
 	useEffect(() => {
-		setLoading(true);
-		fetch('https://api.mocki.io/v1/db81a628/products')
-			.then((res) => res.json())
-			.then((data) => {
-				setProducts(data.products);
-				setLoading(false);
-			})
-			.catch((err) => {
-				setLoading(false);
-				setError(true);
-				setErrorMsg(`${err}`);
-			});
+		getData(setLoading, setProducts, setError, setErrorMsg);
 	}, []);
 
 	const onChangeHandler = (e) => {

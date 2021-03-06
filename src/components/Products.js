@@ -2,11 +2,11 @@ import React from 'react';
 import Product from './Product';
 
 const Products = ({products}) => (
-	<div className='Products'>
+	<section className='Products'>
 		{products.map((product, key) => (
 			<Product key={key} product={product} />
 		))}
-	</div>
+	</section>
 );
 
 export default Products;

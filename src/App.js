@@ -1,8 +1,7 @@
+import {useState, useEffect} from 'react';
 import Header from './components/Header';
 import ProductsList from './components/ProductsList';
 import Main from './containers/Main';
-import './App.css';
-import {useState, useEffect} from 'react';
 
 const App = () => {
 	const [loading, setLoading] = useState(false);
@@ -18,8 +17,8 @@ const App = () => {
 		setLoading(true);
 		fetch('https://api.mocki.io/v1/db81a628/products')
 			.then((res) => res.json())
-			.then((products) => {
-				setProducts(products.products);
+			.then((data) => {
+				setProducts(data.products);
 				setLoading(false);
 			})
 			.catch((err) => {
@@ -30,15 +29,8 @@ const App = () => {
 	}, []);
 
 	const onChangeHandler = (e) => {
-		console.log(e.target.value);
 		setSearchTerm(e.target.value);
 	};
-
-	useEffect(() => {
-		fetch('https://api.mocki.io/v1/db81a628/products')
-			.then((response) => response.json())
-			.then((data) => setProducts(data.products));
-	}, []);
 
 	return (
 		<>

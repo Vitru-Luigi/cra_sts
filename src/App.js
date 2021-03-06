@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import ProductsList from './components/ProductsList';
 import Main from './containers/Main';
 
@@ -38,6 +39,7 @@ const App = () => {
 			<Main>
 				<ProductsList error={error} errorMsg={errorMsg} loading={loading} results={results} />
 			</Main>
+			<Footer />
 		</>
 	);
 };
